@@ -10,7 +10,8 @@ You may share and adapt it for any purpose, including commercially, if you credi
 
 The numbers themselves were published by others:
 - **State governments** (Directorates of Economics and Statistics, Finance Departments and Planning Departments), in their own releases, Economic Surveys and budget documents. Each number's source document is listed in `data/releases.csv`. When you use a specific number, please also cite its source document.
-- **The Ministry of Statistics and Programme Implementation (MoSPI)**, through its eSankhyiki portal (https://esankhyiki.mospi.gov.in/), releases of 8 Aug 2025 and 17 Apr 2026. Source: Ministry of Statistics and Programme Implementation, Government of India.
+- **The Ministry of Statistics and Programme Implementation (MoSPI)**, through its eSankhyiki portal (https://esankhyiki.mospi.gov.in/), releases of 8 Aug 2025 and 17 Apr 2026. Source: Ministry of Statistics and Programme Implementation, Government of India. MoSPI's copyright policy allows its data to be reproduced, redistributed and adapted, for commercial or non-commercial use and without prior permission, provided the source is prominently acknowledged. MoSPI's tables give the state Directorates of Economics and Statistics as the source of the state figures, so please credit both.
+  - **What we changed:** state names were coded and footnote lines removed; the values themselves are unchanged. ITIHAS is a compilation by its authors, not official MoSPI statistics, and its use of MoSPI data does not imply any endorsement by MoSPI or the Government of India.
 
 ## 2. `rbi_handbook/`: Reserve Bank of India
 
