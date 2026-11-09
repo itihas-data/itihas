@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "ITIHAS: Indian Time-series of Initial and Historical Accounts of States"
+version: 1.0.0
+authors:
+  - family-names: Jha
+    given-names: Shrihan
+    # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX   (to add)
+  - family-names: Parekh
+    given-names: Veer
+    # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX   (to add)
+repository-code: "https://github.com/itihas-data/itihas"
+license: CC-BY-4.0
+keywords:
+  - real-time data
+  - data revisions
+  - state GDP
+  - GSDP
+  - fiscal transfers
+  - Finance Commission
+  - official statistics
+  - India
+# The RBI Handbook files in database/rbi_handbook/ are not CC BY; see database/rbi_handbook/NOTICE.md.
+# Add the Zenodo DOI (identifiers) and date-released when the first version is published.

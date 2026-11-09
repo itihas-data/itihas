@@ -1,0 +1,5 @@
+# Internal working notes, never published
+BUILD_NOTES.md
+.DS_Store
+__pycache__/
+*.pyc

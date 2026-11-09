@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "open_values": 5365,
+  "state_values": 3585,
+  "mospi_values": 1780,
+  "state_releases": 242,
+  "states_with_own_releases": 18,
+  "rbi_values": 40401,
+  "rbi_editions": 10,
+  "rbi_files": 52,
+  "rbi_blank_cells_dropped": 2124,
+  "mospi_footnote_rows_dropped": 232,
+  "extraction": {
+    "text": 3028,
+    "ocr": 557
+  },
+  "validation": {
+    "not_hand_checked": 3543,
+    "hand_checked_ok": 30,
+    "corrected_from_page": 11,
+    "hand_checked_corrected": 1
+  },
+  "growth_only_rows": 36,
+  "gsva_rows": 16,
+  "fiscal_years": "2011-12 to 2026-27",
+  "rbi_fiscal_years": "1990-91 to 2024-25",
+  "triangles_open": 64,
+  "triangles_rbi": 26,
+  "consistency": {
+    "pairs": 2302,
+    "within_006": 2298,
+    "within_05": 2302,
+    "max_gap": 0.438
+  }
+}
