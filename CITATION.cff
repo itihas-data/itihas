@@ -23,3 +23,7 @@ keywords:
   - India
 # The RBI Handbook files in database/rbi_handbook/ are not CC BY; see database/rbi_handbook/NOTICE.md.
 # Add the Zenodo DOI (identifiers) and date-released when the first version is published.
+# This file cites the data set, and GitHub's "Cite this repository" button shows it.
+# Do NOT add the paper as `preferred-citation`: GitHub would then show the paper instead of the data set.
+# When the working paper is posted, add it under `references:` (type: report), and later change that entry
+# to the journal reference (type: article) if a journal publishes it. The data set's citation and DOI stay as they are.
