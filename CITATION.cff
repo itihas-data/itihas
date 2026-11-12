@@ -4,6 +4,8 @@ type: dataset
 title: "ITIHAS: Indian Time-series of Initial and Historical Accounts of States"
 version: 1.0.0
 doi: 10.5281/zenodo.24163142
+date-released: "2026-11-12"
+url: "https://itihasdata.org"
 authors:
   - family-names: Jha
     given-names: Shrihan
@@ -23,7 +25,7 @@ keywords:
   - official statistics
   - India
 # The RBI Handbook files in database/rbi_handbook/ are not CC BY; see database/rbi_handbook/NOTICE.md.
-# The DOI above is the version 1.0.0 DOI, reserved on Zenodo. Add date-released when the record is published.
+# The DOI above is the version 1.0.0 DOI on Zenodo (published 12 Nov 2026).
 # This file cites the data set, and GitHub's "Cite this repository" button shows it.
 # Do NOT add the paper as `preferred-citation`: GitHub would then show the paper instead of the data set.
 # When the working paper is posted, add it under `references:` (type: report), and later change that entry
