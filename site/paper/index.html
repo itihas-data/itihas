@@ -20,10 +20,12 @@
   <header class="page-head">
     <h1 class="t-page">Paper</h1>
     <p class="authors">Shrihan Jha and Veer Binoy Parekh</p>
-    <div class="pending" role="list" aria-label="Where the paper will be available">
-      <span role="listitem">PDF <small>link to be added</small></span>
-      <span role="listitem">MPRA <small>link to be added</small></span>
-      <span role="listitem">Zenodo <small>link to be added</small></span>
+    <p class="lede">The Price of Early Data: How State GDP Revisions Would Have Shifted ₹25,654 Crore Between India’s States</p>
+    <p class="small muted">Working paper, version 1 · 12 November 2026</p>
+    <div class="paper-links" style="display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-4)">
+      <a class="btn btn-primary" href="Jha_Parekh_2026_The_Price_of_Early_Data_v1.pdf">Download the paper (PDF)</a>
+      <a class="btn btn-secondary" href="https://doi.org/10.5281/zenodo.24163142">The database on Zenodo</a>
+      <a class="btn btn-secondary" href="https://github.com/itihas-data/itihas">Data and code on GitHub</a>
     </div>
   </header>
 
@@ -31,7 +33,7 @@
     <div class="grid ref">
       <h2 class="col-side t-chart" id="h-abstract">Abstract</h2>
       <div class="col-main">
-        <div class="todo"><b>Text to come: Shrihan; the paper’s own abstract</b>The abstract, word for word as it stands in the working paper.</div>
+        <p class="say">India uses state GDP to calculate the split of central tax money between states and each state’s borrowing cap. Both of these are set using GDP figures that keep changing for years after they’re first published. This led us to ask how much money has moved between states because the tax split and borrowing limits use GDP figures that have not settled, and what change to the rules would reduce the movement. We built an Indian Time-series of Initial and Historical Accounts of States (ITIHAS), which records published estimates of each state’s GDP with the date it came out: 3,631 figures, 431 published versions, 20 states, 2012-13 to 2025-26. We found the two-year rule where early figures get states’ relative growth wrong for about two years; the correlation between early and final figures is 0.22–0.40 before two years and 0.89 after. The problem cannot be solved by predicting the final numbers early as none of our 19 models designed in advance beat the national rate. The study found that ₹25,654 crore of the 15th Commission’s 2021-26 award would have gone to different states, and that about ₹3,600–5,000 crore a year is normal across past Commissions. Borrowing caps were ₹1.44 lakh crore higher than corrected figures give. We suggest that the fix is not using older data, as the settled data worsens the error, but rather re-running the formula with the corrected figures in year 3 of the award (a “true-up”), which fixes about 44% of the moving money. The same idea works for the borrowing caps.</p>
       </div>
     </div>
   </section>
@@ -39,30 +41,40 @@
   <section class="section" aria-labelledby="h-figures">
     <div class="grid ref">
       <h2 class="col-side t-chart" id="h-figures">Figures</h2>
-      <div class="col-main">
-        <p class="small muted">The images are added once the authors confirm which figures to show.</p>
-      </div>
       <div class="col-full figs">
-        <figure class="figslot">
-          <div class="frame">Figure 1</div>
-          <figcaption><div class="todo"><b>Text to come: Shrihan; the paper’s caption for this figure</b>The caption of Figure 1, as printed in the paper.</div></figcaption>
+        <figure>
+          <a href="fig/figure1.png"><img src="fig/figure1.png" alt="Figure 1. How far published state growth figures move after release" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 1.</b> How far published state growth figures move after release</figcaption>
         </figure>
-        <figure class="figslot">
-          <div class="frame">Figure 2</div>
-          <figcaption><div class="todo"><b>Text to come: Shrihan; the paper’s caption for this figure</b>The caption of Figure 2, as printed in the paper.</div></figcaption>
+        <figure>
+          <a href="fig/figure2.png"><img src="fig/figure2.png" alt="Figure 2. Age of the GSDP data the 15th Finance Commission used" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 2.</b> Age of the GSDP data the 15th Finance Commission used</figcaption>
         </figure>
-        <figure class="figslot">
-          <div class="frame">Figure 3</div>
-          <figcaption><div class="todo"><b>Text to come: Shrihan; the paper’s caption for this figure</b>The caption of Figure 3, as printed in the paper.</div></figcaption>
+        <figure>
+          <a href="fig/figure3.png"><img src="fig/figure3.png" alt="Figure 3. How well early figures match the latest figure, by age of the estimate" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 3.</b> How well early figures match the latest figure, by age of the estimate</figcaption>
         </figure>
-        <figure class="figslot">
-          <div class="frame">Figure 4</div>
-          <figcaption><div class="todo"><b>Text to come: Shrihan; the paper’s caption for this figure</b>The caption of Figure 4, as printed in the paper.</div></figcaption>
+        <figure>
+          <a href="fig/figure4.png"><img src="fig/figure4.png" alt="Figure 4. First-published versus latest relative growth" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 4.</b> First-published versus latest relative growth</figcaption>
         </figure>
-        <figure class="figslot">
-          <div class="frame">Figure 5</div>
-          <figcaption><div class="todo"><b>Text to come: Shrihan; the paper’s caption for this figure</b>The caption of Figure 5, as printed in the paper.</div></figcaption>
+        <figure>
+          <a href="fig/figure5.png"><img src="fig/figure5.png" alt="Figure 5. Nowcast models against the national-rate benchmark" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 5.</b> Nowcast models against the national-rate benchmark</figcaption>
         </figure>
+        <figure>
+          <a href="fig/figure6.png"><img src="fig/figure6.png" alt="Figure 6. Money that would have gone to different states under the 15th Commission, by state" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 6.</b> Money that would have gone to different states under the 15th Commission, by state</figcaption>
+        </figure>
+        <figure>
+          <a href="fig/figure7.png"><img src="fig/figure7.png" alt="Figure 7. Placebo Commissions and the base-year scenario" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 7.</b> Placebo Commissions and the base-year scenario</figcaption>
+        </figure>
+        <figure>
+          <a href="fig/figure8.png"><img src="fig/figure8.png" alt="Figure 8. Error from using older data years" loading="lazy" style="width:100%;height:auto;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fff"></a>
+          <figcaption class="small" style="margin-top:var(--space-2)"><b>Figure 8.</b> Error from using older data years</figcaption>
+        </figure>
+      </div>
       </div>
     </div>
   </section>

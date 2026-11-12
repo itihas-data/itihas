@@ -11,7 +11,7 @@
 
 [![Version](https://img.shields.io/badge/version-1.0.0-1e3a8a?style=flat-square)](database/CHANGELOG.md) [![Data licence](https://img.shields.io/badge/data-CC%20BY%204.0-1e3a8a?style=flat-square)](database/LICENSE-DATA.md) [![Code licence](https://img.shields.io/badge/code-MIT-1e3a8a?style=flat-square)](LICENSE) [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24163142-1e3a8a?style=flat-square)](https://doi.org/10.5281/zenodo.24163142)
 
-[Data](#whats-inside) · [Quick start](#quick-start) · [Access from code](#access-from-code) · [Cite](#cite) · [Licence](#licence) · [Codebook](database/codebook.md)
+[Website](https://itihasdata.org) · [Data](#whats-inside) · [Quick start](#quick-start) · [Access from code](#access-from-code) · [Cite](#cite) · [Licence](#licence) · [Codebook](database/codebook.md)
 
 </div>
 
@@ -175,7 +175,7 @@ GitHub's **"Cite this repository"** button (in the sidebar) gives the same citat
 
 - **When you use a specific number**, please also cite its source document, which is listed in `database/data/releases.csv`.
 - **When you use the RBI Handbook files**, keep the Reserve Bank of India acknowledgement in [`database/rbi_handbook/NOTICE.md`](database/rbi_handbook/NOTICE.md).
-- **The working paper** that introduces the database will be listed here once it is posted.
+- **The working paper** that introduces the database: Jha, S. and Parekh, V. B. (2026). *The Price of Early Data: How State GDP Revisions Would Have Shifted ₹25,654 Crore Between India’s States*. Working paper, version 1. [PDF](https://itihasdata.org/paper/Jha_Parekh_2026_The_Price_of_Early_Data_v1.pdf)
 
 ## Licence
 
