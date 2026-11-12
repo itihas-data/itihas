@@ -47,7 +47,7 @@ Karnataka's real GSDP (₹ crore, constant 2011-12 prices) as printed in four do
 | 2018-19 | 11,24,423 | 10,89,271 | 10,82,614 | 10,85,101 |
 | **2019-20** | **12,01,031** | **11,43,781** | **11,49,829** | **11,51,393** |
 
-The first estimate of 2019-20 was 5.0% higher than the figure printed a year later. The paper's own results will be linked here when it is posted.
+The first estimate of 2019-20 was 5.0% higher than the figure printed a year later. The paper's results are in the [working paper](paper/) (https://doi.org/10.5281/zenodo.24173957).
 
 <sub>Source: `database/data/triangles/gsdp_constant/KA.csv`. The documents are listed in `database/data/releases.csv`.</sub>
 
