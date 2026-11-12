@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-GB" data-root="./">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITIHAS: a real-time database of Indian state GDP</title>
+<meta name="description" content="ITIHAS: Indian Time-series of Initial and Historical Accounts of States. A real-time database of Indian state GDP.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+
+<section class="wrap opening" aria-labelledby="title">
+  <div class="grid">
+    <div class="col-text opening-text">
+      <h1 class="t-display" id="title">A <em>real-time</em> database of Indian state GDP</h1>
+      <p class="lede">State GDP figures in India are published early and then revised for about three years. ITIHAS keeps every published version, with its date and its source document, so that anyone can see what was known about a state’s economy at any point in time.</p>
+      <div class="asof">
+        <div class="inline"><label class="lab" for="fy">Growth in</label><select id="fy" class="select mono"></select></div>
+        <p class="lab asof-lab">as known on</p>
+        <p class="serif-date" id="asof-date" aria-live="polite">&nbsp;</p>
+        <div class="inline"><span class="lab" id="show-lab">Show</span><div id="show" aria-labelledby="show-lab"></div></div>
+        <div class="legend" id="map-legend"></div>
+      </div>
+    </div>
+    <div class="col-plot opening-map">
+      <div id="map"></div>
+      <div class="opening-rail">
+        <p class="lab">Small units</p>
+        <div id="chips"></div>
+      </div>
+      <div id="panel" class="panel" hidden></div>
+    </div>
+    <div class="col-full opening-time">
+      <div id="scrub"></div>
+      <details class="astable"><summary>View as table</summary><div class="tbl-wrap tall" id="map-table"></div></details>
+      <div class="source" id="map-source"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-lg" aria-labelledby="h-db">
+  <div class="wrap grid">
+    <div class="col-text stack">
+      <div><span class="step-no">01</span><h2 class="t-section" id="h-db">What is in the database</h2></div>
+      <p class="say">The database brings together three kinds of source: the state governments’ own documents, releases from the Ministry of Statistics and Programme Implementation, and the Reserve Bank of India’s Handbook of Statistics on Indian States. Every figure is stored with the date it first became public.</p>
+      <dl class="facts" id="counts"></dl>
+    </div>
+    <figure class="col-plot exhibit">
+      <div class="ex-head">
+        <div><h3 class="t-chart">The publication record</h3><p class="ex-unit">One mark for each document, by date of publication</p></div>
+        <div class="ex-tools"><div id="rec-sort"></div></div>
+      </div>
+      <div class="legend" style="margin-bottom:12px"><span class="key src-state">State government document</span><span class="key src-rbi">RBI Handbook edition</span><span class="key src-mospi">MoSPI release</span></div>
+      <div class="ex-plot" id="record"></div>
+      <figcaption class="source" id="rec-source"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section-lg" aria-labelledby="h-two">
+  <div class="wrap grid">
+    <div class="col-text stack">
+      <div><span class="step-no">02</span><h2 class="t-section" id="h-two">The two-year rule</h2></div>
+      <p class="say">An early estimate of a state’s growth says little about where the figure will finally settle. For about two years after a fiscal year ends, estimates agree only loosely with the latest figure. After 24 months they agree closely. We call this the two-year rule.</p>
+      <p><a href="findings/two-year-rule/">The two-year rule in full</a></p>
+    </div>
+    <figure class="col-plot exhibit">
+      <div class="ex-head">
+        <div><h3 class="t-chart" id="mat-title">Agreement with the latest figure, by age of the estimate</h3><p class="ex-unit" id="mat-unit"></p></div>
+        <div class="ex-tools"><div id="mat-seg"></div></div>
+      </div>
+      <div class="ex-plot" id="maturity"></div>
+      <figcaption class="source" id="mat-source"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section-lg" aria-labelledby="h-league">
+  <div class="wrap grid">
+    <div class="col-text stack">
+      <div><span class="step-no">03</span><h2 class="t-section" id="h-league">The league table</h2></div>
+      <p class="say">Rankings of states by growth are often quoted as soon as the first figures appear. Those early rankings change a great deal. Many states move several places once the figures are revised, and only one to three of the first top five stay there.</p>
+      <p><a href="findings/league-table/">The league table in full</a></p>
+    </div>
+    <figure class="col-plot exhibit">
+      <div class="ex-head">
+        <div><h3 class="t-chart">States ranked by growth: first published against latest</h3><p class="ex-unit">Rank among the 28 states, real GSDP growth, per cent</p></div>
+        <div class="ex-tools"><label class="lab" for="slope-fy">Fiscal year</label><select id="slope-fy" class="select mono"></select></div>
+      </div>
+      <div class="legend" style="margin-bottom:12px"><span class="key blue">Up three places or more</span><span class="key red">Down three places or more</span><span class="key grey">Within two places</span></div>
+      <div class="ex-plot" id="slope"></div>
+      <figcaption class="source" id="slope-source"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section-lg" aria-labelledby="h-money">
+  <div class="wrap grid">
+    <div class="col-text stack">
+      <div><span class="step-no">04</span><h2 class="t-section" id="h-money">Where the money would have gone</h2></div>
+      <p class="say">State GDP is one input to the formula that divides central taxes among the states. We recomputed the 15th Finance Commission’s shares with later, revised figures. Over 2021 to 2026, ₹25,646 crore would have gone to different states. This is a question of when data become reliable, not of whether the formula is fair.</p>
+      <p><a href="findings/money/">All the Finance Commission results</a></p>
+      <p><a href="calculator/">Try your own numbers in the calculator</a></p>
+    </div>
+    <figure class="col-plot exhibit">
+      <div class="ex-head">
+        <div><h3 class="t-chart">Change in each state’s devolution under revised GSDP</h3><p class="ex-unit" id="money-unit"></p></div>
+        <div class="ex-tools"><div id="money-seg"></div></div>
+      </div>
+      <div class="money-head">
+        <p class="num-xl" id="money-total">&nbsp;</p>
+        <p class="small" id="money-def"></p>
+      </div>
+      <div class="ex-plot" id="money"></div>
+      <figcaption class="source" id="money-source"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section-lg" aria-labelledby="h-use">
+  <div class="wrap">
+    <span class="step-no">05</span>
+    <h2 class="t-section" id="h-use" style="margin-bottom:32px">Use it</h2>
+    <div class="linkrows" id="use"></div>
+    <div class="cite" style="max-width:860px;margin-top:32px"><p id="cite-text"></p><button class="btn btn-secondary btn-sm" type="button" id="cite-copy">Copy citation</button></div>
+  </div>
+</section>
+
+</main>
+<script src="assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="assets/js/pages/home.js"></script>
+</body>
+</html>

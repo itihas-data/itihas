@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-GB" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mizoram · ITIHAS</title>
+<meta name="description" content="ITIHAS: every published estimate of state GDP for Mizoram, with the documents each came from.">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/states.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="states" data-code="MZ" data-slug="mizoram">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+<div class="wrap">
+  <header class="page-head state-head">
+    <div class="state-nav">
+      <a href="../">All states</a>
+      <div class="inline">
+        <label class="sr" for="jump">Go to another state</label><select id="jump" class="select"></select>
+        <a class="btn btn-ghost btn-sm" href="../meghalaya/" rel="prev" title="Meghalaya">Previous</a>
+        <a class="btn btn-ghost btn-sm" href="../nagaland/" rel="next" title="Nagaland">Next</a>
+      </div>
+    </div>
+    <div class="state-title">
+      <div>
+        <h1 class="t-page">Mizoram</h1>
+        <p class="lede" id="kind">&nbsp;</p>
+        <p class="small" id="note"></p>
+      </div>
+      <dl class="facts" id="facts"></dl>
+      <div id="locator" class="state-locator"></div>
+    </div>
+  </header>
+</div>
+<nav class="subnav" aria-label="On this page"><div class="wrap"><div class="tabs">
+  <a href="#every-estimate">Every estimate</a><a href="#one-year">One year</a><a href="#table">The table</a>
+  <a href="#finance-commission">Finance Commission</a><a href="#sources">Sources</a><a href="#download">Download</a>
+</div></div></nav>
+<div class="wrap state-body">
+
+  <figure class="exhibit" id="every-estimate">
+    <div class="ex-head">
+      <div><h2 class="t-chart" id="a-title">Every estimate</h2><p class="ex-unit" id="a-unit"></p></div>
+      <div class="ex-tools"><div id="measure"></div><div id="prices"></div></div>
+    </div>
+    <p class="small" id="thin" hidden></p>
+    <div class="legend" style="margin-bottom:8px"><span class="key line old">Earlier releases, older lighter</span><span class="key line">Newest release on the chosen date</span><span class="key line dash">Projection</span></div>
+    <div class="ex-plot" id="vintages"></div>
+    <div class="state-asof">
+      <p><span class="lab">as known on</span> <span class="serif-date" id="asof-date">&nbsp;</span></p>
+      <div id="scrub"></div>
+    </div>
+    <figcaption class="source" id="a-source"></figcaption>
+  </figure>
+
+  <figure class="exhibit" id="one-year">
+    <div class="ex-head">
+      <div><h2 class="t-chart">How one year settled</h2><p class="ex-unit" id="b-unit"></p></div>
+      <div class="ex-tools"><label class="lab" for="fy">Fiscal year</label><select id="fy" class="select mono"></select></div>
+    </div>
+    <div class="legend" style="margin-bottom:8px"><span class="key src-state">State document</span><span class="key src-rbi">RBI Handbook</span><span class="key src-mospi">MoSPI</span></div>
+    <div class="ex-plot" id="settle"></div>
+    <figcaption class="source" id="b-source"></figcaption>
+  </figure>
+
+  <figure class="exhibit" id="table">
+    <div class="ex-head">
+      <div><h2 class="t-chart">The table</h2><p class="ex-unit" id="c-unit"></p></div>
+      <div class="ex-tools"><span class="small">Follows the measure chosen above</span></div>
+    </div>
+    <div class="tbl-wrap tall" id="triangle"></div>
+    <figcaption class="source" id="c-source"></figcaption>
+  </figure>
+
+  <section class="exhibit" id="finance-commission">
+    <div class="ex-head"><div><h2 class="t-chart">Finance Commission</h2><p class="ex-unit" id="d-unit"></p></div><div class="ex-tools" id="d-tools"></div></div>
+    <div id="fc"></div>
+    <div class="source" id="d-source"></div>
+  </section>
+
+  <section class="exhibit" id="sources">
+    <div class="ex-head"><div><h2 class="t-chart">Sources</h2><p class="ex-unit" id="e-unit"></p></div><div class="ex-tools"><div id="src-filter"></div></div></div>
+    <ol class="doclist" id="docs"></ol>
+    <div class="source" id="e-source"></div>
+  </section>
+
+  <section class="exhibit" id="download">
+    <div class="ex-head"><div><h2 class="t-chart">Download and cite</h2><p class="ex-unit">Revision triangles as CSV: one row per fiscal year, one column per document. State and MoSPI documents only; RBI Handbook figures are not redistributed</p></div></div>
+    <div class="inline" id="dl"></div>
+    <div class="cite" style="max-width:860px"><p id="cite-text"></p><button class="btn btn-secondary btn-sm" type="button" id="cite-copy">Copy citation</button></div>
+  </section>
+
+  <nav class="prevnext" aria-label="Other states">
+    <a href="../meghalaya/" rel="prev"><span>Previous</span>Meghalaya</a>
+    <a href="../nagaland/" rel="next"><span>Next</span>Nagaland</a>
+  </nav>
+</div>
+</main>
+<script src="../../assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="../../assets/js/pages/state.js"></script>
+</body>
+</html>

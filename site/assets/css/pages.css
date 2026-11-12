@@ -1,0 +1,87 @@
+/* Reference pages (Data, Methods, Paper, About): the pieces they share.
+   Loads after site.css. Token colours only; content sits on the page between hairlines. */
+
+/* ---------- a section: its name in the side column, its content beside it ---------- */
+.grid.ref { row-gap: var(--space-4); align-items: start; }
+.ref > .col-main > * + * { margin-top: var(--space-4); }
+.ref .lead-in { font-size: 14px; line-height: 22px; color: var(--ink-secondary); max-width: var(--measure); }
+.authors { font-size: 18px; line-height: 28px; color: var(--ink-secondary); }
+.page-head .authors + * { margin-top: var(--space-5); }
+
+/* The Data and Methods tabs sit under the header, so anything that sticks must clear both. */
+.has-subnav .sticky { top: calc(var(--head-h) + 46px + var(--space-5)); max-height: calc(100vh - var(--head-h) - 46px - 2 * var(--space-5)); overflow: auto; }
+
+/* ---------- rows: a plain two-column list (licences, credits, version) ---------- */
+.rows { border-top: 1px solid var(--border-strong); font-size: 14px; line-height: 22px; }
+.rows > div { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); column-gap: var(--gutter); padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+.rows dt { font-weight: 500; color: var(--ink); }
+.rows dd { color: var(--ink-secondary); }
+.rows dd .mono { font-size: 13px; }
+
+/* ---------- a notice set apart from the text around it ---------- */
+.notice { border-left: 2px solid var(--border-strong); padding: var(--space-1) 0 var(--space-1) var(--space-4); font-size: 14px; line-height: 22px; color: var(--ink-secondary); max-width: var(--measure); }
+.notice p + p { margin-top: var(--space-2); }
+.notice .mark { color: var(--ink); font-weight: 500; }
+
+/* ---------- files table and the first-rows preview ---------- */
+.files td.file { font-family: var(--font-mono); font-size: 12.5px; color: var(--ink); }
+.files .get { display: inline-flex; flex-direction: column; gap: 2px; align-items: flex-start; }
+.files .linkish { white-space: nowrap; }
+.files .get a { color: var(--accent-text); }
+.preview { margin-top: var(--space-5); }
+.preview-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-4); margin-bottom: var(--space-2); font-size: 13px; line-height: 20px; color: var(--ink-secondary); }
+.preview-head .mono { color: var(--ink); }
+.preview .tbl td, .preview .tbl th { max-width: 30ch; overflow: hidden; text-overflow: ellipsis; font-family: var(--font-mono); font-size: 12px; }
+.preview .tbl thead th { text-transform: none; letter-spacing: 0; }
+.tri-links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-4); min-height: 36px; }
+
+/* citation blocks: the copy button keeps its place when the text wraps */
+.ref .cite { margin-top: 0; }
+.ref .cite + .cite, .ref .cite + .todo, .ref .cite-lab + .cite { margin-top: var(--space-2); }
+.cite-lab { font-size: 13px; line-height: 20px; font-weight: 500; color: var(--ink-secondary); }
+.ref .cite-lab ~ .cite-lab { margin-top: var(--space-5); }
+.cite .btn { flex: none; }
+
+/* ---------- Methods: documents shown as written ---------- */
+.doc + .doc { margin-top: var(--space-8); padding-top: var(--space-7); border-top: 1px solid var(--border); }
+.doc-file { font-family: var(--font-mono); font-size: 12px; line-height: 18px; color: var(--ink-muted); margin-bottom: var(--space-3); }
+.prose .doc-file { margin-bottom: var(--space-3); }
+.prose .doc-file + h2 { margin-top: 0; }
+.prose h4 { font-size: 16px; line-height: 24px; font-weight: 500; margin-top: var(--space-5); margin-bottom: var(--space-2); }
+.prose h2, .prose h3, .prose h4 { color: var(--ink); text-wrap: balance; }
+.prose strong { font-weight: 500; color: var(--ink); }
+.prose li > ul, .prose li > ol { margin-top: 6px; margin-bottom: 0; }
+.prose pre { margin: 0 0 var(--space-4); padding: var(--space-3) var(--space-4); overflow-x: auto; background: var(--surface-sunken); border: 1px solid var(--border); border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 13px; line-height: 20px; }
+.prose pre code { background: none; border: 0; padding: 0; font-size: inherit; }
+.prose td code, .prose th code { white-space: nowrap; }
+.prose td { color: var(--ink-secondary); }
+.prose a { overflow-wrap: anywhere; }
+.toc-title { font-size: 13px; line-height: 20px; font-weight: 500; color: var(--ink); margin-bottom: var(--space-2); }
+.toc a:not(.sub) { color: var(--ink); font-weight: 500; margin-top: var(--space-2); }
+.toc a:focus-visible { outline-offset: 0; }
+.methods-stats { margin-bottom: var(--space-8); }
+
+/* ---------- Paper: links to come, and the figure slots ---------- */
+.pending { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.pending > span { display: inline-flex; align-items: baseline; gap: var(--space-2); height: 36px; padding: 0 var(--space-4); border: 1px dashed var(--border-strong); border-radius: var(--radius-md); font-size: 14px; line-height: 34px; font-weight: 500; color: var(--ink-muted); cursor: default; }
+.pending > span small { font-size: 12px; font-weight: 400; }
+.figs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-7) var(--gutter); }
+.ref > .figs { margin-top: var(--space-2); }
+.figslot .frame { aspect-ratio: 4 / 3; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4); font-family: var(--font-mono); font-size: 12px; line-height: 18px; color: var(--ink-muted); }
+.figslot figcaption { margin-top: var(--space-3); }
+
+@media (max-width: 900px) {
+  .has-subnav .sticky { max-height: none; overflow: visible; }
+  .methods-stats { margin-bottom: var(--space-7); }
+  .doc + .doc { margin-top: var(--space-7); padding-top: var(--space-6); }
+}
+@media (max-width: 640px) {
+  .rows > div { grid-template-columns: 1fr; row-gap: 2px; }
+  .figs { grid-template-columns: 1fr; gap: var(--space-6); }
+  .files .get { flex-direction: column; gap: var(--space-1); }
+}
+
+/* ---------- how to cite ---------- */
+.cite-guide { max-width: var(--measure); color: var(--ink-secondary); margin-bottom: var(--space-4); }
+.cite-lab { margin-top: var(--space-4); }
+.cite-note { max-width: var(--measure); margin-top: var(--space-3); }

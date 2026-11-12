@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-GB" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Findings · ITIHAS</title>
+<meta name="description" content="ITIHAS: three findings from a real-time database of Indian state GDP. The two-year rule, the league table, and money.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/findings.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="findings">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+
+<header class="page-head wrap wrap-std">
+  <h1 class="t-page">Findings</h1>
+</header>
+
+<div class="wrap wrap-std">
+  <div class="findings">
+
+    <section class="finding" aria-labelledby="f-two">
+      <div class="finding-text">
+        <h2 class="t-section" id="f-two">The two-year rule</h2>
+        <p class="say">Estimates of a state’s growth agree only loosely with the final figure until about two years after the fiscal year ends, and closely after that.</p>
+        <p><a href="two-year-rule/">The two-year rule in full</a></p>
+      </div>
+      <a class="finding-thumb" href="two-year-rule/" tabindex="-1" aria-hidden="true">
+        <span class="ex-unit">Agreement with the latest figure, by age of the estimate</span>
+        <div id="thumb-two"></div>
+      </a>
+    </section>
+
+    <section class="finding" aria-labelledby="f-league">
+      <div class="finding-text">
+        <h2 class="t-section" id="f-league">The league table</h2>
+        <p class="say">The ranking of states by growth at first publication is a weak guide to the ranking that the revised figures later give.</p>
+        <p><a href="league-table/">The league table in full</a></p>
+      </div>
+      <a class="finding-thumb" href="league-table/" tabindex="-1" aria-hidden="true">
+        <span class="ex-unit">States ranked by growth in 2018–19: first published (left) against latest (right)</span>
+        <div id="thumb-league"></div>
+      </a>
+    </section>
+
+    <section class="finding" aria-labelledby="f-money">
+      <div class="finding-text">
+        <h2 class="t-section" id="f-money">Money</h2>
+        <p class="say">State GDP enters the Finance Commission’s formula and the borrowing ceiling, so revised figures would have sent money to different states and set different ceilings.</p>
+        <p><a href="money/">All the Finance Commission results</a></p>
+      </div>
+      <a class="finding-thumb" href="money/" tabindex="-1" aria-hidden="true">
+        <span class="ex-unit">₹ crore that would have gone to different states, by award</span>
+        <div id="thumb-money"></div>
+      </a>
+    </section>
+
+  </div>
+  <div class="source" id="index-source"></div>
+</div>
+
+</main>
+<script src="../assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="../assets/js/pages/findings.js"></script>
+</body>
+</html>

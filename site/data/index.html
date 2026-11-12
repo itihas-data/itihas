@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-GB" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data · ITIHAS</title>
+<meta name="description" content="ITIHAS: Indian Time-series of Initial and Historical Accounts of States. A real-time database of Indian state GDP.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="data" class="has-subnav">
+<a class="skip" href="#main">Skip to content</a>
+<div class="subnav"><div class="wrap wrap-std"><nav class="tabs" aria-label="Data pages"><a href="./" aria-current="page">Downloads</a><a href="methods/">Methods</a></nav></div></div>
+<main id="main">
+<div class="wrap wrap-std">
+
+  <header class="page-head">
+    <h1 class="t-page">Data</h1>
+    <p class="lede">Everything in the database can be downloaded here as plain CSV files, with a codebook that defines every column. Figures taken from the Reserve Bank of India’s Handbook are kept separately because they carry different terms of use. Please cite the database if you use it.</p>
+  </header>
+
+  <section class="section" aria-labelledby="h-files">
+    <div class="grid ref">
+      <h2 class="col-side t-chart" id="h-files">Files</h2>
+      <div class="col-main">
+        <div class="tbl-wrap" id="files"></div>
+        <div class="preview" id="preview" aria-live="polite" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-tri" id="triangles">
+    <div class="grid ref">
+      <h2 class="col-side t-chart" id="h-tri">Revision triangles, state by state</h2>
+      <div class="col-main">
+        <div class="inline"><label class="lab" for="tri-state">State or union territory</label><select id="tri-state" class="select"></select></div>
+        <div class="tri-links" id="tri-links" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-rbi">
+    <div class="grid ref">
+      <h2 class="col-side t-chart" id="h-rbi">RBI Handbook figures</h2>
+      <div class="col-main">
+        <div class="notice">
+          <p class="mark">© Reserve Bank of India, reproduced with acknowledgement.</p>
+          <p>Source: Reserve Bank of India, Handbook of Statistics on Indian States, editions of 2016 to 2025. <span id="rbi-count"></span></p>
+          <p>These figures are not under CC BY and are not offered for download on this site.</p>
+          <p>The figures as extracted, with their own notice and each spreadsheet’s SHA-256 fingerprint, are in the <a data-repo>repository</a> under <span class="mono">database/rbi_handbook/</span>.</p>
+          <p>The Reserve Bank of India has not reviewed or endorsed ITIHAS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-cite">
+    <div class="grid ref">
+      <h2 class="col-side t-chart" id="h-cite">How to cite</h2>
+      <div class="col-main">
+<p class="cite-guide">If you use the data, cite the database. If you refer to the findings, cite the paper. If you do both, cite both.</p>
+        <p class="cite-lab">The database</p>
+        <div class="cite"><p id="cite-text"></p><button class="btn btn-secondary btn-sm" type="button" id="cite-copy">Copy</button></div>
+        <div class="cite"><pre id="bib-text"></pre><button class="btn btn-secondary btn-sm" type="button" id="bib-copy">Copy BibTeX</button></div>
+        <p class="cite-lab">The paper</p>
+        <div class="cite"><p id="paper-cite"></p><button class="btn btn-secondary btn-sm" type="button" id="paper-copy">Copy</button></div>
+        <p class="small cite-note">The database is deposited on Zenodo, which gives each release its own DOI, so cite the version you used. The paper is a working paper for now. If a journal publishes it, the journal reference will replace the one above; the database citation will not change.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-lic">
+    <div class="grid ref">
+      <h2 class="col-side t-chart" id="h-lic">Licences</h2>
+      <div class="col-main">
+        <dl class="rows">
+          <div><dt>Data compiled from state documents and MoSPI releases</dt><dd>CC BY 4.0. Terms for each file: <a href="../downloads/LICENSE-DATA.md">LICENSE-DATA.md</a>. MoSPI figures: Ministry of Statistics and Programme Implementation, Government of India.</dd></div>
+          <div><dt>RBI Handbook figures</dt><dd>© Reserve Bank of India, reproduced with acknowledgement. Not under CC BY.</dd></div>
+          <div><dt>Code</dt><dd>MIT licence, in the <a data-repo>repository</a>.</dd></div>
+          <div><dt>Typefaces</dt><dd>Onest, Instrument Serif and IBM Plex Mono: SIL Open Font License 1.1. Licence files: <a href="../assets/fonts/LICENSE-variable-onest-5.3.1.txt">Onest</a>, <a href="../assets/fonts/LICENSE-instrument-serif-5.2.8.txt">Instrument Serif</a>, <a href="../assets/fonts/LICENSE-ibm-plex-mono-5.3.0.txt">IBM Plex Mono</a>.</dd></div>
+          <div><dt>Charts</dt><dd>D3 7.9.0: ISC licence. <a href="../assets/vendor/LICENSE-d3.txt">Licence file</a>.</dd></div>
+          <div><dt>Icons</dt><dd>Lucide: ISC licence.</dd></div>
+          <div><dt>Map boundaries</dt><dd>DataMeet India community: CC BY 4.0. Simplified for this site.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="h-ver">
+    <div class="grid ref">
+      <h2 class="col-side t-chart" id="h-ver">Version</h2>
+      <div class="col-main">
+        <dl class="rows">
+          <div><dt>Version</dt><dd class="mono" id="ver">—</dd></div>
+          <div><dt>Built</dt><dd id="built">—</dd></div>
+          <div><dt>Version history</dt><dd><a href="../downloads/CHANGELOG.md">CHANGELOG.md</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+<script type="module" src="../assets/js/pages/data.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-GB" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Money · ITIHAS</title>
+<meta name="description" content="ITIHAS: Finance Commission shares and state borrowing ceilings recomputed under different vintages of state GDP.">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/findings.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="findings">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+
+<div class="subnav"><div class="wrap wrap-std"><nav class="tabs" aria-label="Findings">
+  <a href="../two-year-rule/">The two-year rule</a><a href="../league-table/">The league table</a><a href="./" aria-current="page">Money</a>
+</nav></div></div>
+
+<header class="page-head wrap wrap-std">
+  <p class="crumbs"><a href="../">Findings</a><span aria-hidden="true">/</span><span>Money</span></p>
+  <h1 class="t-page">Money</h1>
+  <p class="lede">State GDP enters two fiscal rules. The Finance Commission uses it to measure how far each state’s income per person is from that of the highest-income states, which helps to set each state’s share of central taxes. The central government uses it to set how much each state may borrow. Both rules are applied to figures that are later revised. This page shows what the revised figures would have meant. It is about the timing of data, not about whether either rule is fair.</p>
+</header>
+
+<div class="wrap wrap-std">
+  <div class="tabs partswitch" role="tablist" aria-label="Parts of this page" id="parts">
+    <button type="button" role="tab" id="tab-fc" aria-controls="part-fc" aria-selected="true" data-part="fc">Finance Commission</button>
+    <button type="button" role="tab" id="tab-nbc" aria-controls="part-nbc" aria-selected="false" data-part="nbc" tabindex="-1">Borrowing ceilings</button>
+  </div>
+</div>
+
+<div class="f-part" id="part-fc" role="tabpanel" aria-labelledby="tab-fc">
+
+  <section class="f-sec wrap wrap-std" aria-labelledby="h-awards">
+    <h2 class="t-section" id="h-awards">Three awards</h2>
+    <figure class="exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">Money that would have gone to different states, by award</h3><p class="ex-unit">Shares recomputed with GSDP revised from the starting vintage to the latest. Select a row to draw it by state below</p></div></div>
+      <div class="ex-plot"><div class="tbl-wrap" id="awards"></div></div>
+      <figcaption class="source" id="awards-source"></figcaption>
+    </figure>
+  </section>
+
+  <section class="f-sec wrap wrap-std" aria-labelledby="h-by" id="by-state">
+    <h2 class="t-section" id="h-by">By state</h2>
+    <figure class="exhibit">
+      <div class="ex-head">
+        <div><h3 class="t-chart">Change in each state’s devolution under revised GSDP</h3><p class="ex-unit" id="by-unit">&nbsp;</p></div>
+        <div class="ex-tools">
+          <div id="by-award" aria-label="Award"></div>
+          <label class="sr" for="by-vintage">Starting vintage</label><select id="by-vintage" class="select"></select>
+          <div id="by-sort" aria-label="Order of states"></div>
+        </div>
+      </div>
+      <div class="ex-plot bars2"><div id="by-bars"></div><div class="ppcol" id="by-pp"></div></div>
+      <figcaption class="source" id="by-source"></figcaption>
+    </figure>
+  </section>
+
+  <section class="f-sec wrap wrap-std" aria-labelledby="h-placebo">
+    <h2 class="t-section" id="h-placebo">Placebo Commissions</h2>
+    <figure class="exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">The same formulas run on other editions of the data</h3><p class="ex-unit">₹ crore a year that would have gone to different states</p></div></div>
+      <div class="legend" style="margin-bottom:12px"><span class="key ring-grey">Placebo: another edition as the Commission’s data</span><span class="key ink">Actual award</span><span class="key band">5th to 95th percentile of resamples</span><span class="key tick">Resample median</span></div>
+      <div class="ex-plot" id="placebo"></div>
+      <p class="small measure">Each open dot applies the same formula to a different edition of the data, as if that edition had been the Commission’s. The filled dot is the actual award. Where it sits among the others shows whether the actual figure is typical.</p>
+      <figcaption class="source" id="placebo-source"></figcaption>
+    </figure>
+  </section>
+
+  <section class="f-sec wrap wrap-std" aria-labelledby="h-own">
+    <h2 class="t-section" id="h-own">A state’s own GSDP</h2>
+    <figure class="exhibit">
+      <div class="ex-head">
+        <div><h3 class="t-chart">Change in a state’s devolution when its own GSDP is 1% higher <span class="badge badge-note plain">Valid for small changes only</span></h3><p class="ex-unit">₹ crore a year; 15th Finance Commission’s final award against the 16th</p></div>
+        <div class="ex-tools"><div id="own-sort" aria-label="Order of states"></div></div>
+      </div>
+      <div class="legend" style="margin-bottom:12px"><span class="key ring-grey">15th Finance Commission, final award</span><span class="key ink">16th Finance Commission</span></div>
+      <div class="ex-plot" id="own"></div>
+      <figcaption class="source" id="own-source"></figcaption>
+    </figure>
+  </section>
+
+  <section class="f-sec wrap wrap-std" aria-labelledby="h-trueup">
+    <h2 class="t-section" id="h-trueup">True-up</h2>
+    <figure class="exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">Re-fixing the shares part-way through the 15th Commission’s final award <span class="badge badge-note plain">Post-hoc</span></h3><p class="ex-unit">₹ crore over 2021–26 that would have gone to different states, without and with a true-up</p></div></div>
+      <div class="legend" style="margin-bottom:12px"><span class="key grey">Without a true-up</span><span class="key ink">With a true-up</span><span class="key dashbox">Corrected by the true-up</span></div>
+      <div class="ex-plot" id="trueup"></div>
+      <figcaption class="source" id="trueup-source"></figcaption>
+    </figure>
+  </section>
+
+  <section class="f-sec wrap wrap-std" aria-labelledby="h-rebase">
+    <h2 class="t-section" id="h-rebase">A change of base year</h2>
+    <figure class="exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">If states’ GSDP shifted as in a past change of base year: 16th Finance Commission <span class="badge badge-note plain">A scenario, not a prediction</span></h3><p class="ex-unit">₹ crore a year that would go to different states; median and 5th to 95th percentile</p></div></div>
+      <div class="ex-plot" id="rebase"></div>
+      <figcaption class="source" id="rebase-source"></figcaption>
+    </figure>
+  </section>
+
+</div>
+
+<div class="f-part" id="part-nbc" role="tabpanel" aria-labelledby="tab-nbc" hidden>
+
+  <section class="f-sec wrap wrap-std" aria-labelledby="h-nbc">
+    <h2 class="t-section" id="h-nbc">Borrowing ceilings</h2>
+    <figure class="exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">Change in states’ borrowing ceilings when the rule is applied to the latest GSDP</h3><p class="ex-unit" id="nbc-unit">Ceiling from the latest vintage minus ceiling from the earliest</p></div></div>
+      <div class="ex-plot statline" id="nbc-stats"></div>
+      <figcaption class="source" id="nbc-stats-source"></figcaption>
+    </figure>
+    <figure class="exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">Gross and net change in ceilings, by fiscal year</h3><p class="ex-unit">₹ crore, summed across states</p></div></div>
+      <div class="legend" style="margin-bottom:12px"><span class="key grey">Gross: sum of absolute changes</span><span class="key blue">Net, above zero</span><span class="key red">Net, below zero</span></div>
+      <div class="ex-plot scroll-x"><div id="nbc"></div></div>
+      <figcaption class="source" id="nbc-source"></figcaption>
+    </figure>
+  </section>
+
+</div>
+
+<div class="wrap wrap-std f-foot">
+  <nav class="prevnext" aria-label="Findings, in order">
+    <a href="../league-table/" rel="prev"><span>Previous</span>The league table</a><span></span>
+  </nav>
+</div>
+
+</main>
+<script src="../../assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="../../assets/js/pages/money.js"></script>
+</body>
+</html>

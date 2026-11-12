@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-GB" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The league table · ITIHAS</title>
+<meta name="description" content="ITIHAS: how the ranking of Indian states by GDP growth changes between the first published figure and the latest.">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/findings.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="findings">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+
+<div class="subnav"><div class="wrap wrap-std"><nav class="tabs" aria-label="Findings">
+  <a href="../two-year-rule/">The two-year rule</a><a href="./" aria-current="page">The league table</a><a href="../money/">Money</a>
+</nav></div></div>
+
+<header class="page-head wrap wrap-std">
+  <p class="crumbs"><a href="../">Findings</a><span aria-hidden="true">/</span><span>The league table</span></p>
+  <h1 class="t-page">The league table</h1>
+  <p class="lede">State growth rates are often read as a league table. This page compares each state’s rank when its growth was first published with its rank today. In most years many states move by several places, so the first league table is a weak guide to the one that the revised figures give.</p>
+</header>
+
+<section class="f-sec wrap wrap-std" aria-labelledby="h-one" id="one-year">
+  <h2 class="t-section" id="h-one">One year</h2>
+  <figure class="exhibit">
+    <div class="ex-head">
+      <div><h3 class="t-chart" id="slope-title">States ranked by growth: first published against latest</h3><p class="ex-unit" id="slope-unit">Rank among the states, real GSDP growth, per cent</p></div>
+      <div class="ex-tools"><label class="lab" for="fy">Fiscal year</label><select id="fy" class="select mono" aria-keyshortcuts="ArrowLeft ArrowRight" title="The left and right arrow keys change the year"></select></div>
+    </div>
+    <div class="legend" style="margin-bottom:12px"><span class="key blue">Up three places or more</span><span class="key red">Down three places or more</span><span class="key grey">Within two places</span></div>
+    <div class="ex-plot" id="slope"></div>
+    <figcaption class="source" id="slope-source"></figcaption>
+  </figure>
+</section>
+
+<section class="f-sec wrap wrap-std" aria-labelledby="h-all">
+  <h2 class="t-section" id="h-all">All years</h2>
+  <figure class="exhibit">
+    <div class="ex-head"><div><h3 class="t-chart">The same chart for every fiscal year</h3><p class="ex-unit">First published rank on the left, latest on the right; one scale throughout. Select a year to load it above</p></div></div>
+    <div class="ex-plot multiples" id="multiples"></div>
+    <figcaption class="source" id="multi-source"></figcaption>
+  </figure>
+</section>
+
+<section class="f-sec wrap wrap-std" aria-labelledby="h-ranks">
+  <h2 class="t-section" id="h-ranks">The ranks</h2>
+  <figure class="exhibit">
+    <div class="ex-head"><div><h3 class="t-chart" id="ranks-title">Growth and rank, first published and latest</h3><p class="ex-unit">Real GSDP growth, per cent; rank 1 is the highest growth in the year</p></div></div>
+    <div class="ex-plot"><div class="tbl-wrap" id="ranks"></div></div>
+    <figcaption class="source" id="ranks-source"></figcaption>
+  </figure>
+</section>
+
+<div class="wrap wrap-std f-foot">
+  <nav class="prevnext" aria-label="Findings, in order">
+    <a href="../two-year-rule/" rel="prev"><span>Previous</span>The two-year rule</a>
+    <a href="../money/" rel="next"><span>Next</span>Money</a>
+  </nav>
+</div>
+
+</main>
+<script src="../../assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="../../assets/js/pages/league.js"></script>
+</body>
+</html>

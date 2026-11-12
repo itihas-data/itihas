@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-GB" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The two-year rule · ITIHAS</title>
+<meta name="description" content="ITIHAS: how long estimates of Indian state GDP growth take to settle, and how large the revisions are.">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="../../assets/css/findings.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="findings">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+
+<div class="subnav"><div class="wrap wrap-std"><nav class="tabs" aria-label="Findings">
+  <a href="./" aria-current="page">The two-year rule</a><a href="../league-table/">The league table</a><a href="../money/">Money</a>
+</nav></div></div>
+
+<header class="page-head wrap wrap-std">
+  <p class="crumbs"><a href="../">Findings</a><span aria-hidden="true">/</span><span>The two-year rule</span></p>
+  <h1 class="t-page">The two-year rule</h1>
+  <p class="lede">How long does a state’s growth figure take to settle? We compare each estimate with the latest figure for the same year, and group the estimates by their age. Estimates less than two years old agree only loosely with the latest figure. Older estimates agree closely, and the revisions still to come become much smaller at the same point.</p>
+</header>
+
+<section class="f-sec wrap wrap-std" aria-labelledby="h-curve">
+  <h2 class="t-section" id="h-curve">The maturity curve</h2>
+  <div class="grid">
+    <figure class="col-half exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">Agreement with the latest figure, by age of the estimate</h3><p class="ex-unit">Cross-state correlation between estimates of that age and the latest figure</p></div></div>
+      <div class="ex-plot" id="mat-corr"></div>
+      <figcaption class="source" id="mat-corr-source"></figcaption>
+    </figure>
+    <figure class="col-half exhibit">
+      <div class="ex-head"><div><h3 class="t-chart">Size of later revisions, by age of the estimate</h3><p class="ex-unit">Root-mean-square revision still to come, percentage points</p></div></div>
+      <div class="ex-plot" id="mat-rms"></div>
+      <figcaption class="source" id="mat-rms-source"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="f-sec wrap wrap-std" aria-labelledby="h-size">
+  <h2 class="t-section" id="h-size">How large revisions are</h2>
+  <figure class="exhibit">
+    <div class="ex-head"><div><h3 class="t-chart">Revisions of states’ early estimates, first to latest</h3><p class="ex-unit">Real GSDP growth; revision in percentage points, latest minus first published</p></div></div>
+    <div class="ex-plot statline" id="headline"></div>
+    <figcaption class="source" id="headline-source"></figcaption>
+  </figure>
+</section>
+
+<section class="f-sec wrap-out" aria-labelledby="h-scatter">
+  <h2 class="t-section" id="h-scatter">First published against latest</h2>
+  <figure class="exhibit">
+    <div class="ex-head">
+      <div><h3 class="t-chart">Growth as first published and as it stands now, every state and year</h3><p class="ex-unit" id="sc-unit">Real GSDP growth, per cent; one dot per state and fiscal year</p></div>
+      <div class="ex-tools"><label class="lab" for="sc-fy">Fiscal year</label><select id="sc-fy" class="select mono"></select></div>
+    </div>
+    <div class="legend" id="sc-legend" style="margin-bottom:12px"></div>
+    <div class="ex-plot" id="scatter"></div>
+    <p class="small measure">Each dot is one state in one year. A dot on the dashed line was not revised at all. The further a dot lies from the line, the more the first published figure differed from the latest one.</p>
+    <figcaption class="source" id="sc-source"></figcaption>
+  </figure>
+</section>
+
+<section class="f-sec wrap-out" aria-labelledby="h-matrix">
+  <h2 class="t-section" id="h-matrix">The revision matrix</h2>
+  <figure class="exhibit">
+    <div class="ex-head">
+      <div><h3 class="t-chart">Revision of growth, by state and fiscal year</h3><p class="ex-unit">Latest minus first published estimate of real GSDP growth, percentage points</p></div>
+      <div class="ex-tools"><label class="lab" for="mx-sort">Sort rows by</label><select id="mx-sort" class="select"></select></div>
+    </div>
+    <div class="legend" id="mx-legend" style="margin-bottom:12px"></div>
+    <div class="ex-plot"><div class="tbl-wrap" id="matrix"></div></div>
+    <figcaption class="source" id="mx-source"></figcaption>
+  </figure>
+</section>
+
+<div class="wrap wrap-std f-foot">
+  <nav class="prevnext" aria-label="Findings, in order">
+    <a href="../league-table/" rel="next"><span>Next</span>The league table</a>
+  </nav>
+</div>
+
+</main>
+<script src="../../assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="../../assets/js/pages/two-year.js"></script>
+</body>
+</html>

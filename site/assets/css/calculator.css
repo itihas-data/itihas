@@ -1,0 +1,70 @@
+/* Calculator only. Controls in columns 1–4 (they stay in view), results in columns 5–12.
+   Loads after site.css; token colours only. */
+
+.calc { align-items: start; row-gap: var(--space-6); padding-bottom: var(--space-4); }
+.calc-controls { grid-row: 1 / span 2; display: grid; gap: var(--space-5); border-top: 1px solid var(--border-strong); padding-top: var(--space-4); }
+.calc-result { grid-row: 1; }
+.calc-rest { grid-row: 2; }
+
+/* ---------- controls ---------- */
+.calc-controls fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.calc-controls legend { padding: 0; margin-bottom: 6px; }
+.calc-controls .select { width: 100%; }
+.pct-row { display: flex; align-items: flex-start; gap: var(--space-3); }
+.pct-slide { flex: 1; min-width: 0; }
+.pct-slide input[type="range"] { display: block; width: 100%; height: 36px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.pct-scale { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; line-height: 16px; color: var(--ink-muted); margin-top: -4px; }
+.pct-box { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 14px; color: var(--ink-secondary); }
+.pct-box .input { width: 84px; }
+.years { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); }
+.years label { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 32px; font-family: var(--font-mono); font-size: 13px; line-height: 20px; color: var(--ink-secondary); cursor: pointer; }
+.years input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.calc-actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.calc-controls .hint { font-size: 12px; line-height: 18px; color: var(--ink-muted); }
+.calc-actions + .hint { margin-top: var(--space-2); }
+
+/* ---------- result: plain rows of figures ---------- */
+.calc-result { border-top: 1px solid var(--border-strong); background: var(--surface); min-width: 0; }
+.cr-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px var(--space-5); padding: var(--space-3) 0; border-bottom: 1px solid var(--border); }
+.cr-lab { font-size: 13px; line-height: 20px; color: var(--ink-secondary); }
+.cr-fig { display: inline-flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end; gap: 0 var(--space-4); font-family: var(--font-mono); font-size: 14px; line-height: 22px; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); }
+.cr-main { padding-block: var(--space-4); }
+.cr-main .cr-lab { font-size: 14px; color: var(--ink); font-weight: 500; }
+
+/* ---------- tables under the chart ---------- */
+.calc-rest details.astable { margin-top: var(--space-4); }
+.calc-rest .tbl tr.is-picked > * { background: var(--selection); }
+.tbl-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-4); margin-bottom: var(--space-3); font-size: 13px; line-height: 20px; color: var(--ink-secondary); }
+.tbl-tools .legend { gap: var(--space-2) var(--space-4); }
+.gsdp td { padding: 3px 6px; }
+.gsdp .input { height: 28px; width: 118px; padding: 0 var(--space-2); font-size: 13px; border-color: var(--border); background-color: transparent; }
+.gsdp .input:hover, .gsdp .input:focus { border-color: var(--border-strong); background-color: var(--surface-raised); }
+.gsdp .input.is-slider { border: 1px dashed var(--accent-bright); color: var(--accent-text); }
+.gsdp .input.is-edited { border: 2px solid var(--accent-bright); background-color: var(--accent-soft); color: var(--ink); font-weight: 500; }
+.gsdp .input[aria-invalid="true"] { border: 2px solid var(--danger); background-color: var(--danger-soft); }
+.cellkey { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-size: 12px; }
+.cellkey i { display: block; width: 18px; height: 12px; border-radius: 3px; }
+.cellkey.edited i { border: 2px solid var(--accent-bright); background: var(--accent-soft); }
+.cellkey.slider i { border: 1px dashed var(--accent-bright); }
+
+/* ---------- what is held fixed ---------- */
+.calc-note ul { list-style: disc; padding-left: 1.2em; max-width: var(--measure); font-size: 14px; line-height: 22px; color: var(--ink-secondary); }
+.calc-note li + li { margin-top: 6px; }
+.calc-note .tbl-wrap { max-width: 520px; margin-bottom: var(--space-5); }
+
+/* ---------- phones: controls, then a result bar that stays at the bottom of the screen ---------- */
+@media (max-width: 900px) {
+  .calc { display: block; }
+  .calc > * + * { margin-top: var(--space-6); }
+  .calc-result {
+    position: sticky; bottom: 0; z-index: 15;
+    margin-inline: calc(-1 * var(--margin)); padding-inline: var(--margin);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .cr-row { padding: 6px 0; }
+  .cr-row:last-child { border-bottom: 0; }
+  .cr-main { padding-block: var(--space-2); }
+  .cr-main .num-lg { font-size: 18px; line-height: 24px; }
+  .cr-fig { font-size: 13px; line-height: 20px; }
+  .gsdp .input { width: 104px; }
+}

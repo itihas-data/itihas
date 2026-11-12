@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-GB" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculator · ITIHAS</title>
+<meta name="description" content="ITIHAS: Indian Time-series of Initial and Historical Accounts of States. A real-time database of Indian state GDP.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/calculator.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="calculator">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+<div class="wrap wrap-std">
+
+  <header class="page-head">
+    <h1 class="t-page">Finance Commission calculator</h1>
+    <p class="lede">Choose a Finance Commission award and a state, then change that state’s GDP. The calculator recomputes every state’s share with the Commission’s own formula. Only state GDP changes; every other input stays as the Commission published it. The results show how sensitive the shares are to one figure. They are not forecasts.</p>
+  </header>
+
+  <div class="grid calc">
+
+    <div class="col-text sticky calc-controls" id="controls" role="group" aria-label="What to change">
+      <div class="field">
+        <span class="lab" id="award-lab">Award</span>
+        <div id="award" aria-labelledby="award-lab"></div>
+      </div>
+      <div class="field">
+        <label for="state">State</label>
+        <select id="state" class="select"></select>
+      </div>
+      <div class="field">
+        <label for="pct">Change its GSDP by</label>
+        <div class="pct-row">
+          <div class="pct-slide">
+            <input type="range" id="pct" min="-20" max="20" step="0.1" value="0" aria-describedby="pct-hint">
+            <div class="pct-scale" aria-hidden="true"><span>−20</span><span>0</span><span>+20</span></div>
+          </div>
+          <span class="pct-box"><input class="input num" type="number" id="pct-n" min="-20" max="20" step="0.1" value="0" inputmode="decimal" aria-label="Per cent change in GSDP"><span aria-hidden="true">%</span></span>
+        </div>
+        <p class="hint" id="pct-hint">Per cent, applied to the years ticked below.</p>
+      </div>
+      <fieldset>
+        <legend class="lab">In these years</legend>
+        <div class="years" id="years"></div>
+      </fieldset>
+      <div>
+        <div class="calc-actions">
+          <button class="btn btn-secondary btn-sm" type="button" id="reset">Reset</button>
+          <button class="btn btn-secondary btn-sm" type="button" id="copy">Copy link</button>
+        </div>
+        <p class="hint">The link carries the award, the state and the per cent change.</p>
+      </div>
+    </div>
+
+    <div class="col-plot calc-result" id="result" role="group" aria-label="Result" aria-live="polite"><p class="empty">Loading the Commission’s figures.</p></div>
+
+    <div class="col-plot calc-rest">
+      <figure class="exhibit">
+        <div class="ex-head">
+          <div><h2 class="t-chart">Every state: change in ₹ crore a year</h2><p class="ex-unit" id="bars-unit"></p></div>
+        </div>
+        <div class="ex-plot" id="bars"></div>
+
+        <details class="astable" id="d-shares">
+          <summary>Table: shares before and after</summary>
+          <div class="tbl-tools">
+            <span>Share of devolution, per cent, for each state.</span>
+            <button class="btn btn-secondary btn-sm" type="button" id="csv">Download CSV</button>
+          </div>
+          <div class="tbl-wrap tall" id="tbl"></div>
+        </details>
+
+        <details class="astable" id="d-grid">
+          <summary>Edit every GSDP figure</summary>
+          <div class="tbl-tools">
+            <span id="edit-count"></span>
+            <span class="legend"><span class="cellkey edited"><i></i>edited by hand</span><span class="cellkey slider"><i></i>set by the slider</span></span>
+          </div>
+          <div class="tbl-wrap tall" id="grid"></div>
+        </details>
+
+        <figcaption class="source" id="calc-source"></figcaption>
+      </figure>
+
+      <section class="exhibit calc-note" aria-labelledby="h-fixed">
+        <div class="ex-head"><h2 class="t-chart" id="h-fixed">What is held fixed</h2></div>
+        <div class="tbl-wrap" id="weights"></div>
+        <ul id="fixed-list"></ul>
+      </section>
+    </div>
+
+  </div>
+</div>
+</main>
+<script src="../assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="../assets/js/pages/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Findings: the index and its three pages. Loads after site.css; colours and lengths come from tokens. */
+
+/* ---------- layout ---------- */
+/* A container that starts at the standard left edge and runs out to the wide right edge,
+   so wide exhibits stay left-aligned with the text above them. */
+.wrap-out {
+  width: 100%;
+  padding-left: max(var(--margin), calc((100% - var(--content-width)) / 2));
+  padding-right: max(var(--margin), calc((100% - var(--wide)) / 2));
+}
+.f-sec { padding-top: var(--space-8); }
+.page-head + .f-sec, .f-part > .f-sec:first-child { padding-top: 0; }
+.f-sec > .t-section { margin-bottom: var(--space-6); }
+.f-sec .exhibit > .todo, .f-sec .exhibit > .small.measure { margin-top: var(--space-4); }
+.grid > .exhibit + .exhibit { margin-top: 0; }
+.f-foot { margin-top: var(--space-8); }
+.subnav .tabs a { padding-block: 14px; }
+.t-chart .badge { margin-left: var(--space-2); vertical-align: 3px; font-family: var(--font-sans); letter-spacing: 0; }
+.ex-plot.scroll-x { overflow-x: auto; }
+#nbc { min-width: 520px; }
+
+/* legend keys used on these pages */
+.key.ink::before { background: var(--ink); }
+.key.ring-grey::before { background: var(--surface); border: 1.5px solid var(--vintage-2); }
+.key.band::before { width: 18px; height: 8px; border-radius: 1px; background: color-mix(in srgb, var(--vintage-1) 28%, transparent); }
+.key.tick::before { width: 2px; height: 12px; border-radius: 0; background: var(--ink-secondary); }
+.key.dashbox::before { width: 16px; height: 8px; border-radius: 1px; background: none; border: 1.25px dashed var(--vintage-2); }
+
+/* ---------- index: three rows ---------- */
+.findings { border-top: 1px solid var(--border-strong); }
+.finding { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--space-5); align-items: start; padding-block: var(--space-7); border-bottom: 1px solid var(--border); }
+.finding-text { grid-column: 1 / span 5; display: grid; gap: var(--space-4); justify-items: start; }
+.finding-thumb { grid-column: 7 / span 6; min-width: 0; display: block; color: inherit; text-decoration: none; }
+.finding-thumb .ex-unit { display: block; margin: 0 0 var(--space-3); }
+.finding-thumb svg { pointer-events: none; }
+.finding-thumb:hover .ex-unit { color: var(--accent-text); }
+.findings + .source { border-top: 0; }
+
+/* ---------- two-year rule ---------- */
+.is-linked > circle:first-child { stroke: var(--accent-bright); stroke-width: 3px; }
+.is-linked > text { fill: var(--ink); }
+.dot { cursor: pointer; }
+
+.matrix th, .matrix td { padding-block: 5px; }
+.matrix thead th.num { padding-inline: var(--space-2); }
+/* the name column keeps to a fixed measure so it can stay in view on a phone */
+.matrix .mx-name { display: block; max-width: 220px; overflow: hidden; text-overflow: ellipsis; }
+.matrix thead .mx-name { white-space: normal; }
+.matrix th[scope="row"] a { text-decoration: none; }
+.matrix th[scope="row"] a:hover { text-decoration: underline; }
+.matrix td.mx, .matrix td.mx-none { padding: 0; border-bottom: 1px solid var(--surface); border-left: 1px solid var(--surface); }
+.matrix td.mx a { display: block; min-width: 54px; padding: 6px var(--space-2); font-family: var(--font-mono); font-size: 12px; line-height: 18px; font-variant-numeric: tabular-nums; text-align: right; text-decoration: none; }
+.matrix td.mx a.one { color: var(--ink-muted); }
+.matrix td.mx a:hover, .matrix td.mx a:focus-visible { outline: 2px solid var(--ink); outline-offset: -2px; border-radius: 0; }
+.matrix th[scope="row"] a:focus-visible { outline-offset: 0; }
+
+/* ---------- league table ---------- */
+.multiples { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: var(--space-4) var(--gutter); }
+.multi { display: block; width: 100%; min-width: 0; padding: var(--space-2) 0 0; border: 0; border-top: 1px solid var(--border); background: none; text-align: left; cursor: pointer; color: var(--ink-secondary); }
+.multi .mono { display: block; font-size: 12px; line-height: 18px; margin-bottom: var(--space-1); }
+.multi-plot { display: block; }
+.multi svg { pointer-events: none; }
+.multi:hover { color: var(--ink); border-top-color: var(--ink-secondary); }
+.multi[aria-pressed="true"] { color: var(--ink); border-top: 2px solid var(--accent); padding-top: calc(var(--space-2) - 1px); }
+.multi[aria-pressed="true"] .mono { font-weight: 500; }
+
+/* ---------- money ---------- */
+.partswitch { margin-bottom: var(--space-7); }
+#awards tbody tr { cursor: pointer; }
+#awards tbody tr.is-on > * { background: var(--selection); }
+#awards tbody tr.is-on > th { box-shadow: inset 2px 0 0 var(--accent); }
+#awards .sub { display: block; font-weight: 400; color: var(--ink-muted); }
+.rowpick { all: unset; cursor: pointer; font-weight: 500; }
+.rowpick:hover { color: var(--accent-text); }
+.rowpick:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: var(--radius-sm); }
+.rowpick[aria-pressed="true"] { color: var(--accent-text); }
+
+/* the by-state bars with a second column: change in share, pp */
+.bars2 { display: grid; grid-template-columns: minmax(0, 1fr) 84px; column-gap: var(--space-3); align-items: start; }
+.ppcol { position: relative; padding-top: 4px; font-family: var(--font-mono); font-size: 11px; font-variant-numeric: tabular-nums; color: var(--ink-secondary); text-align: right; }
+.ppcol b { position: absolute; right: 0; top: -18px; font-family: var(--font-sans); font-weight: 500; font-size: 12px; line-height: 16px; color: var(--ink-muted); white-space: nowrap; }
+.ppcol span { display: block; height: 20px; line-height: 20px; }
+
+@media (max-width: 900px) {
+  .finding { padding-block: var(--space-6); }
+  .finding-text, .finding-thumb { grid-column: 1 / -1; }
+  .f-sec { padding-top: var(--space-7); }
+  .f-sec > .t-section { margin-bottom: var(--space-5); }
+  .f-foot { margin-top: var(--space-7); }
+  .partswitch { margin-bottom: var(--space-6); }
+  .matrix .mx-name { max-width: 124px; }
+}
+@media (max-width: 640px) {
+  .bars2 { grid-template-columns: minmax(0, 1fr); }
+  .ppcol { display: none; }
+}

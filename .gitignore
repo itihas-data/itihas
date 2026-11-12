@@ -3,3 +3,7 @@ BUILD_NOTES.md
 .DS_Store
 __pycache__/
 *.pyc
+
+# Internal planning and drafting notes, never published
+site-plan.md
+site/TEXT_DRAFTS.md

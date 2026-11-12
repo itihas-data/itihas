@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-GB" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>States and union territories · ITIHAS</title>
+<meta name="description" content="ITIHAS: every published estimate of state GDP, for each of India's states and union territories.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/states.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("itihas-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
+</head>
+<body data-page="states">
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+<div class="wrap">
+  <header class="page-head">
+    <h1 class="t-page">States and union territories</h1>
+    <p class="lede">Each state and union territory has its own page, with every published estimate, the document it came from, and how the figures changed over time. Coverage varies: some states publish their own figures often, while others appear only in the central compilations.</p>
+  </header>
+  <div class="grid states-grid">
+    <figure class="col-half exhibit sticky">
+      <div class="ex-head">
+        <div><h2 class="t-chart" id="map-title">Documents in the database</h2><p class="ex-unit" id="map-unit"></p></div>
+        <div class="ex-tools"><div id="measure"></div></div>
+      </div>
+      <div class="legend" id="map-legend" style="margin-bottom:8px"></div>
+      <div class="ex-plot states-map"><div id="map"></div></div>
+      <div class="states-chips"><p class="lab">Small units</p><div id="chips"></div></div>
+      <figcaption class="source" id="map-source"></figcaption>
+    </figure>
+    <div class="col-half exhibit">
+      <div class="ex-head">
+        <div><h2 class="t-chart">All 34, with what the database holds for each</h2><p class="ex-unit">Select a row or a state on the map to open its page</p></div>
+        <div class="ex-tools"><input class="input" id="filter" type="search" placeholder="Filter by name" aria-label="Filter states by name"></div>
+      </div>
+      <div class="tbl-wrap" id="table"></div>
+      <div class="source" id="table-source"></div>
+    </div>
+  </div>
+</div>
+</main>
+<script src="../assets/vendor/d3-7.9.0.min.js"></script>
+<script type="module" src="../assets/js/pages/states.js"></script>
+</body>
+</html>
