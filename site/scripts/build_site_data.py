@@ -348,7 +348,7 @@ def main() -> None:
             state_publishers=report["states_with_own_releases"], rbi_values=report["rbi_values"],
             rbi_editions=report["rbi_editions"], states=len(summaries),
             text=report["extraction"]["text"], ocr=report["extraction"]["ocr"],
-            hand_checked=sum(v for k, v in report["validation"].items() if k != "not_hand_checked"),
+            hand_checked=report["validation"]["hand_checked_ok"] + report["validation"]["hand_checked_corrected"],  # values a person checked against the page
         ),
         fiscal_years=fys,
         states=summaries,
@@ -361,6 +361,10 @@ def main() -> None:
 
     build_results(res_root, out)
     build_calc(res_root, repo, out)
+    # Apply the corrections of 12 Nov 2026 (decisions D42, D44, D45): unrounded Finance Commission shares,
+    # the J&K borrowing-ceiling fix and the same-day release rule. See apply_corrections.py.
+    import subprocess
+    subprocess.run([sys.executable, "-I", str(Path(__file__).with_name("apply_corrections.py")), str(res_root)], check=True)
 
     # Downloads served next to the site.
     dl = repo / "site/downloads"

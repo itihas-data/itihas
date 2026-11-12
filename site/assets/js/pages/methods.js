@@ -140,7 +140,7 @@ loadSite().then((site) => {
   $("stats").innerHTML = [
     [c.text, "values read from the text layer of a PDF"],
     [c.ocr, "values read from scanned pages, by OCR or by eye"],
-    [c.hand_checked, "values checked by hand against the source page, or corrected from it"],
+    [c.hand_checked, "values checked by hand against the source page"],
   ].map(([n, label]) => `<div><p class="num-lg">${fmtInt(n)}</p><p class="small">${label}</p></div>`).join("");
 }).catch((e) => { console.error(e); $("stats").innerHTML = `<p class="empty">Could not load the counts. ${esc(e.message)}</p>`; });
 

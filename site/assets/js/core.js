@@ -160,7 +160,7 @@ const SRC_TAGS = [
   ["state", "State documents", "", ""],
   ["rbi", "RBI Handbook", "*", "© Reserve Bank of India, reproduced with acknowledgement; not under CC BY."],
   ["mospi", "MoSPI", "†", "Ministry of Statistics and Programme Implementation, Government of India."],
-  ["map", "Boundaries", "‡", "DataMeet India community (CC BY 4.0), simplified."],
+  ["map", "Boundaries (not official)", "‡", "DataMeet India community (CC BY 4.0), simplified. These are not the official boundaries of India and are shown for illustration only."],
 ];
 export function sourceNote(lines) {
   let text = lines.filter(Boolean);

@@ -267,7 +267,7 @@ function trueup(m) {
   };
   responsive(el, draw);
   $("trueup-source").innerHTML = sourceNote([
-    `Post-hoc illustration, not pre-registered. The 15th Commission’s final-award formula is run again on the same years with a later edition of the RBI Handbook, and the new shares apply from the year shown; the dashed part is the amount this corrects. The total without a true-up differs slightly from the figure in the first table, which sums shares rounded to four decimals.`,
+    `Post-hoc illustration, not pre-specified. The 15th Commission’s final-award formula is run again on the same years with a later edition of the RBI Handbook, and the new shares apply from the year shown; the dashed part is the amount this corrects.`,
     `${NOTE.devolution} ${NOTE.rbi}`,
   ]);
 }
