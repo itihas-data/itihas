@@ -9,9 +9,9 @@ _[Top section to be written by the authors.]_
 
 ## How to cite
 
-> Jha, S. and Parekh, V. (2026). *ITIHAS: Indian Time-series of Initial and Historical Accounts of States* (version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+> Jha, S. and Parekh, V. B. (2026). *ITIHAS: Indian Time-series of Initial and Historical Accounts of States* (version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24163142
 
-BibTeX and the full citation guidance are in the [main README](../README.md#cite). The DOI will be filled in when version 1.0.0 is archived on Zenodo.
+BibTeX and the full citation guidance are in the [main README](../README.md#cite).
 
 When you use a specific number, please also cite its source document, listed in `data/releases.csv`. The RBI Handbook figures need the acknowledgement in `rbi_handbook/NOTICE.md`.
 

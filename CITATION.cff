@@ -3,13 +3,14 @@ message: "If you use this dataset, please cite it as below."
 type: dataset
 title: "ITIHAS: Indian Time-series of Initial and Historical Accounts of States"
 version: 1.0.0
+doi: 10.5281/zenodo.24163142
 authors:
   - family-names: Jha
     given-names: Shrihan
-    # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX   (to add)
+    orcid: "https://orcid.org/0009-0006-7105-8463"
   - family-names: Parekh
-    given-names: Veer
-    # orcid: https://orcid.org/XXXX-XXXX-XXXX-XXXX   (to add)
+    given-names: Veer Binoy
+    orcid: "https://orcid.org/0009-0002-9975-7398"
 repository-code: "https://github.com/itihas-data/itihas"
 license: CC-BY-4.0
 keywords:
@@ -22,7 +23,7 @@ keywords:
   - official statistics
   - India
 # The RBI Handbook files in database/rbi_handbook/ are not CC BY; see database/rbi_handbook/NOTICE.md.
-# Add the Zenodo DOI (identifiers) and date-released when the first version is published.
+# The DOI above is the version 1.0.0 DOI, reserved on Zenodo. Add date-released when the record is published.
 # This file cites the data set, and GitHub's "Cite this repository" button shows it.
 # Do NOT add the paper as `preferred-citation`: GitHub would then show the paper instead of the data set.
 # When the working paper is posted, add it under `references:` (type: report), and later change that entry

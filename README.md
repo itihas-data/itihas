@@ -9,7 +9,7 @@
 
 **Every published estimate of Indian state GDP, kept with the date it became public.**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-1e3a8a?style=flat-square)](database/CHANGELOG.md) [![Data licence](https://img.shields.io/badge/data-CC%20BY%204.0-1e3a8a?style=flat-square)](database/LICENSE-DATA.md) [![Code licence](https://img.shields.io/badge/code-MIT-1e3a8a?style=flat-square)](LICENSE) [![DOI](https://img.shields.io/badge/DOI-to%20be%20assigned-9ca3af?style=flat-square)](#cite)
+[![Version](https://img.shields.io/badge/version-1.0.0-1e3a8a?style=flat-square)](database/CHANGELOG.md) [![Data licence](https://img.shields.io/badge/data-CC%20BY%204.0-1e3a8a?style=flat-square)](database/LICENSE-DATA.md) [![Code licence](https://img.shields.io/badge/code-MIT-1e3a8a?style=flat-square)](LICENSE) [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24163142-1e3a8a?style=flat-square)](https://doi.org/10.5281/zenodo.24163142)
 
 [Data](#whats-inside) · [Quick start](#quick-start) · [Access from code](#access-from-code) · [Cite](#cite) · [Licence](#licence) · [Codebook](database/codebook.md)
 
@@ -156,17 +156,17 @@ curl -LO https://raw.githubusercontent.com/itihas-data/itihas/v1.0.0/database/da
 
 If you use ITIHAS, please cite the database:
 
-> Jha, S. and Parekh, V. (2026). *ITIHAS: Indian Time-series of Initial and Historical Accounts of States* (version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+> Jha, S. and Parekh, V. B. (2026). *ITIHAS: Indian Time-series of Initial and Historical Accounts of States* (version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24163142
 
 ```bibtex
 @misc{itihas2026,
-  author       = {Jha, Shrihan and Parekh, Veer},
+  author       = {Jha, Shrihan and Parekh, Veer Binoy},
   title        = {{ITIHAS}: Indian Time-series of Initial and Historical Accounts of States},
   year         = {2026},
   version      = {1.0.0},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.XXXXXXX},
-  url          = {https://doi.org/10.5281/zenodo.XXXXXXX},
+  doi          = {10.5281/zenodo.24163142},
+  url          = {https://doi.org/10.5281/zenodo.24163142},
   howpublished = {Data set}
 }
 ```
@@ -195,7 +195,7 @@ New versions are planned after each RBI Handbook edition (usually in December) a
 
 ## Authors
 
-**Shrihan Jha** and **Veer Parekh**.
+**Shrihan Jha** ([ORCID 0009-0006-7105-8463](https://orcid.org/0009-0006-7105-8463)) and **Veer Binoy Parekh** ([ORCID 0009-0002-9975-7398](https://orcid.org/0009-0002-9975-7398)).
 
 <div align="center">
 <sub>Data: CC BY 4.0 · Code: MIT · RBI Handbook figures © Reserve Bank of India</sub>

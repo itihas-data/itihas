@@ -12,13 +12,13 @@ ITIHAS contains material under three different sets of terms. Check which folder
 
 ## 1. `data/`: Creative Commons Attribution 4.0 International
 
-The compilation in `data/` is © 2026 Shrihan Jha and Veer Parekh. It is licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/legalcode
+The compilation in `data/` is © 2026 Shrihan Jha and Veer Binoy Parekh. It is licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/legalcode
 
 The compilation consists of the selection of documents, the dating of each estimate, the coding and structure of the records, the release list, the state codes and the revision triangles.
 
 **Attribution.** Cite the database as shown in `README.md`. For example:
 
-> Data: ITIHAS v1.0.0 (Jha and Parekh, 2026), CC BY 4.0. Original figures published by state governments and the Ministry of Statistics and Programme Implementation, Government of India.
+> Data: ITIHAS v1.0.0 (Jha and Parekh, 2026), https://doi.org/10.5281/zenodo.24163142, CC BY 4.0. Original figures published by state governments and the Ministry of Statistics and Programme Implementation, Government of India.
 
 **Original publishers.** The numbers themselves were published by others, and you should credit them too:
 - **State governments**, through their Directorates of Economics and Statistics, Finance Departments and Planning Departments: in state income releases, Economic Surveys and budget documents. The source document of every number is listed in `data/releases.csv`. When you rely on a specific number, cite that document.
