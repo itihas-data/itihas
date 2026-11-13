@@ -35,8 +35,8 @@ references:
         given-names: Veer Binoy
         orcid: "https://orcid.org/0009-0002-9975-7398"
     year: 2026
-    doi: 10.5281/zenodo.24173957
-    notes: "Working paper, version 1"
+    doi: 10.5281/zenodo.24206861
+    notes: "Working paper, version 1.1"
 # The RBI Handbook files in database/rbi_handbook/ are not CC BY; see database/rbi_handbook/NOTICE.md.
 # The DOI above is the version 1.0.0 DOI on Zenodo (published 12 Nov 2026).
 # This file cites the data set, and GitHub's "Cite this repository" button shows it.

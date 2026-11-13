@@ -7,7 +7,7 @@ export const REPO_URL = "https://github.com/itihas-data/itihas";
 // Two things can be cited. The database is the Zenodo record: it has one DOI per version and never changes.
 // The paper is a working paper for now; if a journal publishes it, replace CITE_PAPER with the journal reference.
 export const CITE = "Jha, S. and Parekh, V. B. (2026). ITIHAS: Indian Time-series of Initial and Historical Accounts of States (version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24163142";
-export const CITE_PAPER = "Jha, S. and Parekh, V. B. (2026). The Price of Early Data: How State GDP Revisions Would Have Shifted ₹25,654 Crore Between India’s States. Working paper, version 1. Zenodo. https://doi.org/10.5281/zenodo.24173957";
+export const CITE_PAPER = "Jha, S. and Parekh, V. B. (2026). The Price of Early Data: How State GDP Revisions Would Have Shifted ₹25,654 Crore Between India’s States. Working paper, version 1.1. Zenodo. https://doi.org/10.5281/zenodo.24206861";
 
 // ---------- standing source notes ----------
 export const NOTE = {

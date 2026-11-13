@@ -47,7 +47,7 @@ Karnataka's real GSDP (₹ crore, constant 2011-12 prices) as printed in four do
 | 2018-19 | 11,24,423 | 10,89,271 | 10,82,614 | 10,85,101 |
 | **2019-20** | **12,01,031** | **11,43,781** | **11,49,829** | **11,51,393** |
 
-The first estimate of 2019-20 was 5.0% higher than the figure printed a year later. The paper's results are in the [working paper](paper/) (https://doi.org/10.5281/zenodo.24173957).
+The first estimate of 2019-20 was 5.0% higher than the figure printed a year later. The paper's results are in the [working paper](paper/) (https://doi.org/10.5281/zenodo.24206861).
 
 <sub>Source: `database/data/triangles/gsdp_constant/KA.csv`. The documents are listed in `database/data/releases.csv`.</sub>
 
@@ -175,7 +175,7 @@ GitHub's **"Cite this repository"** button (in the sidebar) gives the same citat
 
 - **When you use a specific number**, please also cite its source document, which is listed in `database/data/releases.csv`.
 - **When you use the RBI Handbook files**, keep the Reserve Bank of India acknowledgement in [`database/rbi_handbook/NOTICE.md`](database/rbi_handbook/NOTICE.md).
-- **The working paper** that introduces the database: Jha, S. and Parekh, V. B. (2026). *The Price of Early Data: How State GDP Revisions Would Have Shifted ₹25,654 Crore Between India’s States*. Working paper, version 1. Zenodo. https://doi.org/10.5281/zenodo.24173957
+- **The working paper** that introduces the database: Jha, S. and Parekh, V. B. (2026). *The Price of Early Data: How State GDP Revisions Would Have Shifted ₹25,654 Crore Between India’s States*. Working paper, version 1.1. Zenodo. https://doi.org/10.5281/zenodo.24206861
 
 ## Licence
 
